@@ -4,7 +4,7 @@ Submitted by: **Vanessa Tang**
 
 **Sea Monster Crowdfunding** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: **3** hours spent in total
+Time spent: **4** hours spent in total
 
 ## Required Features
 
@@ -18,7 +18,7 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 <!-- * [ ] List anything else that you can get done to improve the app functionality! -->
-* [x] Added a link directly to the our games section
+* [x] Added a nav bar to link to stats and our games section
 * [x] Added styling to buttons so it is easy to tell which filter is active at a time
 
 ## Video Walkthrough

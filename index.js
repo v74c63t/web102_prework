@@ -43,7 +43,7 @@ function addGamesToPage(games) {
         // TIP: if your images are not displaying, make sure there is space
         // between the end of the src attribute and the end of the tag ("/>")
         div.innerHTML = `<img src=${game.img} class='game-img' />
-                    <h3>${game.name}</h3>
+                    <h2>${game.name}</h2>
                     <p>${game.description}</p>
                     <p>Backers: ${game.backers}</p>`;
 

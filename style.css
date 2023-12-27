@@ -84,3 +84,7 @@ button {
     margin: 1%;
     border-radius: 7px;
 }
+
+button:hover {
+    background-color: #a8b0bc;
+}

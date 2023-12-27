@@ -17,7 +17,9 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
+<!-- * [ ] List anything else that you can get done to improve the app functionality! -->
+* [x] Added a link directly to the our games section
+* [x] Added styling to buttons so it is easy to tell which filter is active at a time
 
 ## Video Walkthrough
 

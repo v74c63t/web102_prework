@@ -19,6 +19,11 @@ body {
     margin-top: -10px;
 }
 
+.header-text > a {
+    text-decoration: none;
+    color: black;
+}
+
 .stats-container {
     display: flex;
     align-items: center;

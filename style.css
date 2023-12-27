@@ -17,9 +17,26 @@ body {
     margin-left: -10px;
     margin-right: -10px;
     margin-top: -10px;
+    justify-content: space-between;
 }
 
-.header-text > a {
+.logo, .header-links {
+    display: flex;
+}
+
+.header-links {
+    text-decoration: none;
+    list-style: none;
+    gap: 1rem;
+    font-size: 1.25rem;
+}
+
+.header-links > a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+a {
     text-decoration: none;
     color: black;
 }

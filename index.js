@@ -94,9 +94,20 @@ gamesCard.innerHTML = `<p>${GAMES_JSON.length.toLocaleString()}</p>`;
  * Skills used: functions, filter
 */
 
+// select each button in the "Our Games" section
+const unfundedBtn = document.getElementById("unfunded-btn");
+const fundedBtn = document.getElementById("funded-btn");
+const allBtn = document.getElementById("all-btn");
+allBtn.classList.add('active-btn');
+const btns = [unfundedBtn, fundedBtn, allBtn];
+
 // show only games that do not yet have enough funding
 function filterUnfundedOnly() {
     deleteChildElements(gamesContainer);
+    btns.forEach(btn => {
+        btn.classList.remove('active-btn');
+    });
+    unfundedBtn.classList.add('active-btn');
 
     // use filter() to get a list of games that have not yet met their goal
     let unfunded = GAMES_JSON.filter( (game) => {
@@ -110,6 +121,10 @@ function filterUnfundedOnly() {
 // show only games that are fully funded
 function filterFundedOnly() {
     deleteChildElements(gamesContainer);
+    btns.forEach(btn => {
+        btn.classList.remove('active-btn');
+    });
+    fundedBtn.classList.add('active-btn');
 
     // use filter() to get a list of games that have met or exceeded their goal
     let funded = GAMES_JSON.filter( (game) => {
@@ -123,15 +138,14 @@ function filterFundedOnly() {
 // show all games
 function showAllGames() {
     deleteChildElements(gamesContainer);
+    btns.forEach(btn => {
+        btn.classList.remove('active-btn');
+    });
+    allBtn.classList.add('active-btn');
 
     // add all games from the JSON data to the DOM
     addGamesToPage(GAMES_JSON);
 }
-
-// select each button in the "Our Games" section
-const unfundedBtn = document.getElementById("unfunded-btn");
-const fundedBtn = document.getElementById("funded-btn");
-const allBtn = document.getElementById("all-btn");
 
 // add event listeners with the correct functions to each button
 unfundedBtn.addEventListener('click', filterUnfundedOnly);

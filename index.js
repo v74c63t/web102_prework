@@ -150,9 +150,9 @@ const descriptionContainer = document.getElementById("description-container");
 const numUnfunded = GAMES_JSON.reduce( (unfunded, game) => {
     return game.goal > game.pledged ? unfunded + 1 : unfunded;
 }, 0); // getting number using reduce
-const numFunded = GAMES_JSON.filter( (game) => {
-    return game.goal <= game.pledged;
-}).length; // getting number using filter
+// const numUnfunded = GAMES_JSON.filter( (game) => {
+//     return game.goal > game.pledged;
+// }).length; // getting number using filter
 
 
 // create a string that explains the number of unfunded games using the ternary operator
@@ -178,7 +178,7 @@ const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
 });
 
 // use destructuring and the spread operator to grab the first and second games
-const [firstGame, secondGame, ...others] = sortedGames;
+const [firstGame, secondGame, ..._] = sortedGames;
 
 // create a new element to hold the name of the top pledge game, then append it to the correct element
 let firstGameElem = document.createElement('p');
